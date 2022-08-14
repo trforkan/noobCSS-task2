@@ -1,0 +1,69 @@
+<div class="main">
+
+  <h2 class="main__header">Project Overview</h2>
+
+  <div fxLayout="row" class="main__container" >
+
+
+    <div class="main__container__left">
+
+      <mat-tab-group class="main__container__left__tabs-group" mat-stretch-tabs (selectedTabChange)="display($event)">
+        <ng-container *ngFor="let tabItem of tabItems">
+          <mat-tab class="main__container__left__tabs-group__tab" [label]="tabItem">
+            <div fxLayout="row" class="main__container__left__tabs-group__tab__items">
+              <mat-icon class="main__container__left__tabs-group__tab__items__icon">view_list</mat-icon>
+              <h3 class="main__container__left__tabs-group__tab__items__name"> {{tabItem}}</h3>
+            </div>
+          </mat-tab>
+        </ng-container>
+
+      </mat-tab-group>
+
+      <app-items-list [itemName]="selectedTab"></app-items-list>
+
+    </div>
+
+    <div class="main__container__right">
+
+      <div fxLayoutAlign="space-between" class="main__container__right__buttons">
+        <button class="main__container__right__buttons__button"  mat-raised-button>COLLABORATIVE</button>
+        <button class="main__container__right__buttons__button-exit"  mat-icon-button><mat-icon>close</mat-icon></button>
+      </div>
+
+      <div fxLayoutAlign="center" class="main__container__right__circle">
+        <img class="main__container__right__circle__image" src="assets/WHO.jpg" alt="">
+      </div>
+
+      <div fxLayoutAlign="space-between" fxLayout="row" class="main__container__right__name">
+        <h2>XYZ Organization</h2>
+        <button mat-icon-button><mat-icon>edit</mat-icon></button>
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <div fxLayout="center"  class="main__container__right__address">
+        <mat-icon class="main__container__right__address__icon">place</mat-icon>
+        <span>Dhanmondi 27, Dhaka</span>
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <div fxLayout="column" class="main__container__right__domain">
+        <span class="main__container__right__domain__link">Domain : <a class="main__container__right__domain__link__attribute" href="xyz.com">xyz.com</a></span>
+        <span>Discipline : <b>Painting</b></span>
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <div fxLayout="row" class="main__container__right__owner-info">
+        <img class="main__container__right__owner-info__profile" src="assets/img_avatar.png" alt="">
+        <div fxLayout="column" class="main__container__right__owner-info__contact">
+          <span>Mr XYZ</span>
+          <mat-hint>xyz@mail.com</mat-hint>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

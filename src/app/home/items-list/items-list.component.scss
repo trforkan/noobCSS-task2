@@ -1,0 +1,48 @@
+.container {
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+
+  &__panel{
+    // margin: 1px;
+
+    &__expansion-panel {
+      margin-top: 10px;
+      border: 1px solid #DFDFE1;
+
+      &__title {
+        // border: 1px solid blue;
+
+
+        &__items {
+
+          // border: 1px solid red;
+          width: 100%;
+          &__radio-button {
+
+            &__hint {
+              font-size: smaller;
+            }
+          }
+        }
+
+
+
+      }
+
+
+
+      &__data {
+        &__item {
+          margin-left: 20px;
+          margin-top: 15px;
+        }
+        &__hint {
+          font-size: small;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+}
