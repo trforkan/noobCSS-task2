@@ -1,8 +1,8 @@
 <div class="container">
 
 
-  <mat-accordion class="container__panel" *ngFor="let item of itemList index as i">
-      <mat-expansion-panel class="mat-elevation-z0 container__panel__expansion-panel">
+  <mat-accordion class="container__panel" *ngFor="let item of itemList index as i" >
+      <mat-expansion-panel class="mat-elevation-z0 container__panel__expansion-panel" (click)="openExpansion(i)" [expanded]="item.expanded">
         <mat-expansion-panel-header>
 
           <mat-panel-title class="container__panel__expansion-panel__title" fxLayoutAlign="space-between" flexLayout="row">
@@ -18,10 +18,10 @@
 
             </div>
           </mat-panel-title>
-          <!-- <mat-panel-description>A demo title</mat-panel-description> -->
+
 
         </mat-expansion-panel-header>
-        <!-- i'm the items inside the expansion panel -->
+
         <div class="container__panel__expansion-panel__data">
           <mat-divider></mat-divider>
           <p class="container__panel__expansion-panel__data__item">Print Size: A3 Portrait</p>
